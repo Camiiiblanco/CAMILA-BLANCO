@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+/*Globales*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: black;
+    scroll-behavior:smooth;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*HEADER*/
+
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 1.3rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+}
+
+.header::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, .3);
+backdrop-filter: blur(5px);
+z-index: -1;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-bar a {
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.7rem;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .nav-bar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .3);
+        backdrop-filter: blur (5px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 3);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.nav-bar {
+        height: 17.7rem;
+    }
+
+    .nav-bar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.nav-bar a {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+.hero {
+    width: 100%;
+    height: 110vh;
+    background: url(../IMAGNES/FOTO\ HORIZONTAL.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.sub-head {
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+    color:rgb(231, 247, 8);
+    font-weight: 600;
+    line-height: .4;
+}
+
+.tit-head {
+    color: #fff;
+    font-size: 3.7rem;
+    font-weight: 900;
+    letter-spacing: .5rem
+}
+
+.desc-head {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+}
+
+.cta-button {
+    display: inline-block;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    font-size: 1.1rem;
+    background-color: yellow;
+    padding: 1.5rem 3rem ;
+    color: black;
+    border-radius: .6rem;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    color:rgb(11, 120, 7);
+    background-color: #fff;
+}
+
+
+/*PRODUCTOS*/
+
+section {
+    width: 80%;
+    margin: 80px auto;
+}
+
+.tittle {
+    text-align: center;
+    font-size: 6vmin;
+    color: rgb(61, 94, 51);
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: rgb(94, 119, 100);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.row .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.productos .row {
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: 3vmin;
+    color: black;
+    margin: 20px auto;
+}
+
+p {
+    color: black;
+    padding: 0px 40px;
+    text-align:left;
+}
+
+.productos .cta-button {
+margin-top: 30px;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+/*INSPO CARROUSEL*/
+
+.inspo {
+    margin: 0;
+    padding: 9rem;
+    background-color: rgb(209, 209, 209);
+    width: 100%;
+}
+
+.inspo .row .col {
+    width: 50%;
+}
+
+.inspo .carousel slide {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel slide img {
+    width: 500px;
+}
+
+.inspo h1 {
+    font-size: 6vmin;
+    color: rgb(61, 94, 51);
+}
+
+.inspo p {
+    font-size: 2vmin;
+    text-align: center;
+}
+
+.inspo .col {
+    text-align: center;
+}
+
+/*CONTACTO*/
+
+#form {
+    background-image: url(../IMAGNES/FOTO\ HORIZONTAL\ 1.jpg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 70px;
+    width: 100%;
+    background-size:contain;
+    background-position:right;
+    height: 100vh;
+
+    .linecontacto {
+        width: 150px;
+        height: 4px;
+        background: rgb(94, 119, 100);
+        margin: 5px 25px;
+        margin-bottom: 50px;
+        border-radius: 5px;
+    }
+}
+.contacto {
+    color:rgb(61, 94, 51);
+    font-size: 6vmin;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(61, 94, 51);
+    font-size: 4vmin;
+}
+button {
+    background-color: #b08e6b;
+    color: #fff;
+    padding: 10 pc 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 6vmin;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+    height: 50px;
+  
+}
+button:hover {
+    background-color: #7a5c3c;
+}
+
+/*FOOTER*/
+
+#pie {
+    background-color: #ffffff;
+    color: rgb(61, 94, 51);
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 15px; 
+}

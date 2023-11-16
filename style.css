@@ -45,7 +45,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgba(0, 0, 0, .3);
+background: rgba(0, 0, 0, 0.3);
 backdrop-filter: blur(5px);
 z-index: -1;
 }
@@ -144,24 +144,25 @@ z-index: -1;
 .hero {
     width: 100%;
     height: 110vh;
-    background-image: url(FOTO\ HORIZONTAL.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
+    position: relative;
     align-items: center;
     text-align: center;
-    position:relative;
     z-index: 1;
 }
 
 .hero::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(16, 15, 15, 0.3);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(img/foto\ horizontal\ 3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: -1;
 }
 
@@ -277,7 +278,7 @@ margin-bottom: 30px;
     object-fit: cover;
 }
 
-/*INSPO CARROUSEL*/
+/*INSPO*/
 
 .inspo {
     margin: 0;
@@ -286,82 +287,91 @@ margin-bottom: 30px;
     width: 100%;
 }
 
-.inspo .row .col {
-    width: 50%;
-}
-
-.inspo .carousel slide {
+.galeria-inspo {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.carousel slide img {
-    width: 500px;
+.imagen-inspo {
+    width: 24%;
+    margin-bottom: 10px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
 }
 
-.inspo h1 {
-    font-size: 6vmin;
-    color: rgb(61, 94, 51);
+.imagen-inspo > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
 }
 
-.inspo p {
-    font-size: 2vmin;
-    text-align: center;
+.hover-galeria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(112, 17%, 25%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.inspo .col {
-    text-align: center;
+.imagen-inspo:hover .hover-galeria{
+    transform: scale(1);
 }
 
 /*CONTACTO*/
 
-#form {
-    background-image: url(FOTO\ HORIZONTAL\ 1.jpg);
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    padding: 70px;
+.Contacto {
     width: 100%;
-    background-size:contain;
-    background-position:right;
     height: 100vh;
+    background-image: url(img/foto\ horizontal\ 3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
 
-    .linecontacto {
-        width: 150px;
-        height: 4px;
-        background: rgb(94, 119, 100);
-        margin: 5px 25px;
-        margin-bottom: 50px;
-        border-radius: 5px;
-    }
+.form {
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 2px;
+    padding: 3.5rem 1.5rem;
 }
-.contacto {
-    color:rgb(61, 94, 51);
-    font-size: 6vmin;
+
+.form-container {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-auto-columns: 100%;
 }
-.form-group {
-    margin-bottom: 20px;
-}
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: rgb(61, 94, 51);
-    font-size: 4vmin;
-}
-button {
-    background-color: #b08e6b;
-    color: #fff;
-    padding: 10 pc 20px;
+
+.form-input {
+    font-family: "Poppins";
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    outline: none;
     border: none;
-    border-radius: 5px;
-    font-size: 6vmin;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100px;
-    height: 50px;
-  
+    border: 1px solid #d2d2c9;
+    border-radius: 0.8rem;
 }
-button:hover {
-    background-color: #7a5c3c;
+
+.form-input--message {
+    resize: none;
+    padding: 1.8rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.Contacto .cta-button {
+    border: none;
 }
 
 /*FOOTER*/

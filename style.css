@@ -23,6 +23,20 @@ a {
     text-decoration: none;
 }
 
+.tittle {
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(61, 94, 51);
+    margin-bottom: 2rem;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: rgb(94, 119, 100);
+    margin: 5px auto;
+    border-radius: 5px;
+}
 
 /*HEADER*/
 
@@ -216,19 +230,6 @@ z-index: -1;
     margin: 80px auto;
 }
 
-.tittle {
-    text-align: center;
-    font-size: 6vmin;
-    color: rgb(61, 94, 51);
-}
-
-.line {
-    width: 150px;
-    height: 4px;
-    background: rgb(94, 119, 100);
-    margin: 10px auto;
-    border-radius: 5px;
-}
 
 @media (min-width: 768px) {
     .plantas {
@@ -278,9 +279,9 @@ margin-bottom: 30px;
     object-fit: cover;
 }
 
-/*INSPO*/
+/*INSPO HOME FOTOS*/
 
-.inspo {
+.inspo-fotos {
     margin: 0;
     padding: 9rem;
     background-color: rgb(209, 209, 209);
@@ -326,6 +327,49 @@ display: block;
 .imagen-inspo:hover .hover-galeria{
     transform: scale(1);
 }
+
+@media (max-width: 480px) {
+    #inspohome-F {
+        display: none;
+    }
+}
+
+/*INSPO HOME VIDEO*/
+
+.inpo-video {
+    width: 100vh;
+}
+
+@media (min-width: 480px) {
+    #inspohome-V {
+        display: none;
+    }
+}
+
+.video {
+    width: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+.video::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.video-plantas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 /*CONTACTO*/
 

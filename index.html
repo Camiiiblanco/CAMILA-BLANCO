@@ -149,11 +149,14 @@
         </div>
     </section>
 
-     <!-- INSPO FOTOS -->
+    <!-- INSPO HOME FOTOS -->
 
-     <section id="inspohome" class="inspo">
+     <section id="inspohome-F" class="inspo-fotos">
         <div class="container-inspo">
-            <h1 class="tittle">INSPO HOGAR</h1>
+            <div class="tittle">
+                <h1>INSPO HOGAR</h1>
+                <div class="line"></div>   
+            </div>
             <div class="galeria-inspo">
                 <div class="imagen-inspo">
                     <img src="img/inspo 1.jpg" alt="">
@@ -206,13 +209,35 @@
             </div>
         </div>
      </section>
-    
+
+     <!-- INSPO HOME VIDEO -->
+
+     <section id="inspohome-V" class="inspo-video">
+        <div class="container-inspovideo">
+            <div class="tittle">
+                <h1>INSPO HOGAR</h1>
+                <div class="line"></div>   
+            </div>
+            <div class="video">
+                <iframe class="video-plantas" 
+                src="https://www.youtube.com/embed/DVJ5eSFpRUo?si=RudnABE0j3DmIAzx" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+            </div>
+        </div>
+    </section>
      <!-- CONTACTO -->
 
      <section  class="Contacto">
         <form id="form" class="form">
             <div class="form-container">
-                <h1 class="tittle">CONTACTO</h1>
+                <div class="tittle">
+                    <h1>CONTACTO</h1>
+                    <div class="line"></div>   
+                </div>
                 
                 <input type="text" class="form-input" placeholder="Nombre">
                 <input type="email" class="form-input" placeholder="Email">
@@ -226,12 +251,20 @@
     <script src="script.js"></script>
 </body> 
 
-<!-- CONTACTO --> 
+<!-- FOOTER --> 
 
-<footer>
-    <footer id="pie">
-        <p>&copy; 2023 Todos los derechos reservados. Prohibida su reproducción total o parcial.</p>
-        <h1>hola</h1>
-    </footer>
+  <footer class="footer">
+    <div class="linkedin-youtube">
+        <a href="https://www.youtube.com" target="_blank" class="enlaceyoutube">
+            <img src="./img/youtubelogo.png" alt="Youtube" class="iconoyoutube">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="enlacelinkedin">
+            <img src="./img/linkedinlogo.png" alt="Youtube" class="iconolinkedin">
+        </a>
+    </div>
+    <div>
+        <p class="copyright">&copy Blanco Asociadas. Todos los derechos reservados.<span class="fecha"></span></p>
+    </div>
 </footer>
+<!-- PPIO PIE DE PAGINA -->
 </html>

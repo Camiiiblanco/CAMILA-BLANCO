@@ -133,7 +133,7 @@ z-index: -1;
     }
 
     #check:checked~.nav-bar {
-        height: 14rem;
+        height: 18rem;
         background-color: black;
         opacity: 70%;
     }
@@ -222,7 +222,15 @@ z-index: -1;
     background-color: #fff;
 }
 
+@media (max-width: 480px) {
+    .hero p {
+        font-size: 0.9rem;
 
+    }
+    .hero h2 {
+        display: none;
+    }
+}
 /*PRODUCTOS*/
 
 .productos {

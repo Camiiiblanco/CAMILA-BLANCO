@@ -1,3 +1,4 @@
+//ALERTA NOMBRE
 
 let nombre = prompt ("¿Cuál es tu nombre?");
 let alerta = alert("bienvenido" + "" + nombre);
@@ -34,8 +35,7 @@ function tuFuncion(){
     document.body.style.backgroundColor = "#ffffff"
 }
 
-
-
+//VERIFICAR EDAD
 
 function verificarEdad (){
     if (document.getElementById("edad").value<="18"){

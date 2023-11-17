@@ -8,8 +8,8 @@ La página web proporciona información sobre ejemplares que estan de moda para 
 Camila Sofía Blanco
 
 ## Links
-- link al deploy en gitHub:
-- link al repositorio de gitHub:
+- link al deploy en gitHub: https://camiiiblanco.github.io/CAMILA-BLANCO/ 
+- link al repositorio de gitHub: https://github.com/Camiiiblanco/CAMILA-BLANCO.git
 
 ## Logo 
 ![fotologo] (foto de logo.webp)

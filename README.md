@@ -13,3 +13,18 @@ Camila Sofía Blanco
 
 ## Logo 
 ![fotologo] (foto de logo.webp)
+
+## Contenido del repositorio
+- html
+- css
+- javascript
+- img (carpeta)
+
+## Tecnologias utilizadas
+- html5
+- css3
+- javascript
+
+## Redes Sociales
+Instagram @rocelplantas
+

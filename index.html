@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css"
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="img/foto de logo.webp" type="image/x-icon"
 </head>
 <body>
 
@@ -37,7 +38,8 @@
             <h2 class="sub-head">Bienvenido/a</h2>
             <H1 class="tit-head">ROCEL PLANTAS</H1>
             <P class="desc-head">Las plantas te hacen más feliz. Parece una exageración, pero la verdad es que interactuar con la naturaleza y con las plantas mejora el estado de ánimo, reduce el estrés, el enojo y mejora la sensación de bienestar psicológico. Además mejoran la autoestima, te hacen sentir productivo y te ofrecen una sensación de logro.</P>
-            <button id="boton" class="cta-button" onclick="saludar()">VERDE</button>
+            <button id="boton" class="cta-button" onclick="color1()">VERDE</button>
+            <button id="boton1" class="cta-button" onclick="color2()">BLANCO</button>
         </div>
     </main>
 
@@ -240,10 +242,12 @@
                 </div>
                 
                 <input type="text" class="form-input" placeholder="Nombre" required>
+                <input type="number" id= "edad" class="form-input" placeholder="Edad" required>
                 <input type="email" class="form-input" placeholder="Email" required>
                 <textarea class="form-input form-input--message" placeholder="Mensaje" minlength="10" required></textarea>
            
-                <input type="submit" value="ENVIAR" class="cta-button">
+                <button class="cta-button" onclick="verificarEdad()">ENVIAR</button>
+                <p id="mensaje"></p>
             </div>
         </form>
      </section>
